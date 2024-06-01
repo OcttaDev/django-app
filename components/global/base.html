@@ -1,11 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>{% block text %}HEADER GLOBAL {% endblock text%}</h1>
+{% include "global/partials/head.html" %}
+    <header class="flex justify-between items-center px-10 h-20 bg-green-900/50">
+      <div>
+        <h1 class="text-2xl text-white font-bold">Django app</h1>
+      </div>
+
+      <nav>
+        <ul class="flex items-center gap-5">
+          <li><a href="" class="text-white text-sm font-semibold">HOME</a></li>
+          <li><a href="" class="text-white text-sm font-semibold">BLOG</a></li>
+          <li><a href="" class="text-white text-sm font-semibold">ABOUT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main>{%block content%}{% endblock content %}</main>
+
+    <footer class="absolute bottom-0 bg-gray-800 w-full h-14 flex justify-center items-center">
+      <h1 class="text-white text-center text-md font-bold">@by octtadev</h1>
+    </footer>
   </body>
 </html>
