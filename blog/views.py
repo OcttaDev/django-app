@@ -5,8 +5,15 @@ from django.shortcuts import render
 
 
 def blog(request):
+
+    context = {
+        'text': 'Olá, está é a pagina home',
+        'title': 'Blog',
+    }
+
     print("[0 - REQUESTS]")
     return render(
         request,
-        template_name='blog/index.html'
+        'blog/index.html',
+        context
     )

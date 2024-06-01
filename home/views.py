@@ -7,7 +7,14 @@ from django.shortcuts import render
 def home(request):
 
     print("[0 - REQUESTS]")
+
+    context = {
+        'text': 'Olá, está é a pagina home',
+        'title': 'Home',
+    }
+
     return render(
         request,
-        template_name="home/index.html"
+        "home/index.html",
+        context,
     )
